@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sistema de Abertura</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li:last-child {
+	margin-right: 0;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 10px;
+}
+
+main {
+	margin: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+section {
+	background-color: #f2f2f2;
+	padding: 20px;
+	width: 30%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+button[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #666;
+}
+
+    </style>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Cadastro de Clientes</a></li>
+				<li><a href="#">Financeiro</a></li>
+				<li><a href="#">Cadastro de Produtos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Cadastro de Clientes</h2>
+			<form>
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+
+				<label for="usuario">Usuário:</label>
+				<input type="text" id="usuario" name="usuario" required>
+
+				<label for="senha">Senha:</label>
+				<input type="password" id="senha" name="senha" required>
+
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="ativo">Ativo:</label>
+				<input type="checkbox" id="ativo" name="ativo" checked>
+
+				<button type="submit">Cadastrar</button>
+			</form>
+		</section>
+
+		<section>
+			<h2>Financeiro</h2>
+			<p>Aqui vem o conteúdo do módulo Financeiro.</p>
+		</section>
+
+		<section>
+			<h2>Cadastro de Produtos</h2>
+			<p>Aqui vem o conteúdo do módulo Cadastro de Produtos.</p>
+		</section>
+	</main>
+</body>
+</html>
