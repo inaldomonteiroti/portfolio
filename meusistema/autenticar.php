@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         session_start();
         $_SESSION['usuario'] = $usuario;
         header('Location: modulos/index.html');
+        header('Location: modulos/index.html');
         exit;
     } else {
         // Autenticação falhou, exibe uma mensagem de erro
@@ -22,4 +23,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo $erro;
     }
 }
+
 ?>
