@@ -1,4 +1,5 @@
 ﻿<?php
+echo "<meta name='refresh' content='0;url=produto-lista.php?removido=true' />";
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Define as credenciais de acesso
