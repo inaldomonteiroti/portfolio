@@ -3,7 +3,6 @@
     const senha = formulario.senha.value;
     if (usuario === 'usuario' && senha === 'senha') {
     // Se o usuário e a senha estiverem corretos, envia o formulário
-    formulario.submit();
     window.location.href = 'modulos/index.html';
     } else {
     // Caso contrário, exibe uma mensagem de erro
