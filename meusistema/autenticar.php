@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($usuario == $usuario_valido && $senha == $senha_valida) {
         // Autenticação bem-sucedida, inicia a sessão e redireciona para a página inicial
    $url = $_SERVER['REQUEST_URI'];
-   if ($url == "modulo/index.html"){
+  
       $link = "http://". $_SERVER['HTTP_HOST']. $url;
       header("HTTP/1.1 301 Moved Permanently");
       header("Location: $link");
