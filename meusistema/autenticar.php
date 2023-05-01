@@ -1,8 +1,6 @@
 ﻿<?php
-
-
-echo $_POST['usuario'];
-echo $_POST['senha'];
+echo "<hidden id='usuario'></hidden>";
+echo "<hidden id='senha'></hidden>";
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -29,6 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<!-- <script>
+<script>
     window.location.href = 'modulos/index.html';
-</script> -->
+</script>

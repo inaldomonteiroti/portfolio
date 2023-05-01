@@ -164,13 +164,16 @@ a{color:inherit;text-decoration:none}
 .foot-lnk{
 	text-align:center;
 }
+.mensagem-erro{
+	color: white;
+}
 </style>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<form method="POST" action="autenticar.php">
+<form method="POST" action="autenticar.php" id="formulario">
   <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
@@ -188,7 +191,7 @@ a{color:inherit;text-decoration:none}
 				<div class="group">
 					<input type="submit" class="button" value="Enviar">
 				</div>
-				<div class="hr"></div>
+				<span id="mensagem-erro" style="color: white;"></span> <!-- elemento para exibir a mensagem de erro -->
 			</div>
 			<div class="for-pwd-htm">
 				<div class="group">
@@ -198,9 +201,33 @@ a{color:inherit;text-decoration:none}
 				<div class="group">
 					<input type="submit" class="button" value="Resetar Senha">
 				</div>
+				
 				<div class="hr"></div>
 			</div>
 		</div>
 	</div>
 </div>
 </form>
+   <script>
+    const formulario = document.getElementById('formulario');
+    const mensagemErro = document.getElementById('mensagem-erro');
+
+    formulario.addEventListener('submit', (event) => {
+    event.preventDefault(); // impede o envio do formulário
+  
+    const usuario = formulario.usuario.value;
+    const senha = formulario.senha.value;
+  
+  // Aqui, você deve implementar a lógica de verificação do usuário e senha
+  // Por exemplo, você pode verificar se o usuário e a senha estão armazenados em um banco de dados
+  // ou em um arquivo de texto.
+
+     if (usuario === 'usuario' && senha === 'senha') {
+    // Se o usuário e a senha estiverem corretos, envia o formulário
+    formulario.submit();
+    } else {
+    // Caso contrário, exibe uma mensagem de erro
+    mensagemErro.innerText = 'Usuário ou senha inválidos';
+    }
+    });
+    </script>
