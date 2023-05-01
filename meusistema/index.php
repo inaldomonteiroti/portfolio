@@ -170,7 +170,7 @@ a{color:inherit;text-decoration:none}
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<form method="post" action="autenticar.php">
+<form method="POST" action="autenticar.php">
   <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
@@ -179,11 +179,11 @@ a{color:inherit;text-decoration:none}
 			<div class="sign-in-htm">
 				<div class="group">
 					<label for="user" class="label">Usuário</label>
-					<input id="user" name="user" type="text" class="input">
+					<input id="usuario" name="usuario" type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Senha</label>
-					<input id="pass" name="pass" type="password" class="input" data-type="password">
+					<input id="senha" name="senha" type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<input type="submit" class="button" value="Enviar">
