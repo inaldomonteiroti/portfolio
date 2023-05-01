@@ -24,6 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<script>
+<!-- <script>
     window.location.href = 'modulos/index.html';
-</script>
+</script> -->
