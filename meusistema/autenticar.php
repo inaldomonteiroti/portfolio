@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Autenticação bem-sucedida, inicia a sessão e redireciona para a página inicial
         session_start();
         $_SESSION['usuario'] = $usuario;
-        header('Location: modulos/index.html');
+        header('Location: autenticar.php');
         exit;
     } else {
         // Autenticação falhou, exibe uma mensagem de erro
