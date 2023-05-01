@@ -1,7 +1,7 @@
 ﻿<?php
-echo "<meta name='refresh' content='0;url=modulos/index.html' />";
+
 // Verifica se o formulário foi enviado
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     // Define as credenciais de acesso
     $usuario_valido = 'usuario';
     $senha_valida = 'senha';
@@ -22,6 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $erro = 'Usuário ou senha inválidos.';
         echo $erro;
     }
-}
+
 
 ?>
