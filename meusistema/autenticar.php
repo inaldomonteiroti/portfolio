@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Autenticação bem-sucedida, inicia a sessão e redireciona para a página inicial
         session_start();
         $_SESSION['usuario'] = $usuario;
-        header('Location: home.php');
+        header('Location: modulos/index.html');
         exit;
     } else {
         // Autenticação falhou, exibe uma mensagem de erro
@@ -23,3 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
+<script>
+    window.location.href = 'modulos/index.html';
+</script>
