@@ -1,7 +1,6 @@
 ﻿<?php
-
 // Verifica se o formulário foi enviado
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Define as credenciais de acesso
     $usuario_valido = 'usuario';
     $senha_valida = 'senha';
@@ -15,13 +14,12 @@
         // Autenticação bem-sucedida, inicia a sessão e redireciona para a página inicial
         session_start();
         $_SESSION['usuario'] = $usuario;
-        header('Location: modulos/index.html');
+        header('Location: home.php');
         exit;
     } else {
         // Autenticação falhou, exibe uma mensagem de erro
         $erro = 'Usuário ou senha inválidos.';
         echo $erro;
     }
-
-
+}
 ?>
