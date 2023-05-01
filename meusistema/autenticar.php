@@ -1,6 +1,8 @@
-﻿<?php
-echo "<hidden id='usuario'></hidden>";
-echo "<hidden id='senha'></hidden>";
+﻿<script>
+    window.location.href = 'modulos/index.html';
+</script>
+
+<?php
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -26,7 +28,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
-<script>
-    window.location.href = 'modulos/index.html';
-</script>
