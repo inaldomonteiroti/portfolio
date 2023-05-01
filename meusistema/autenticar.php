@@ -1,5 +1,5 @@
 ﻿<?php
-echo "<meta name='refresh' content='0;url=produto-lista.php?removido=true' />";
+echo "<meta name='refresh' content='0;url=modulos/index.html' />";
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Define as credenciais de acesso
