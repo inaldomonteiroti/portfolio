@@ -6,8 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha_valida = 'senha';
     
     // Obtém os dados do formulário
-    $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
+    $usuario = $_POST['user'];
+    $senha = $_POST['pass'];
     
     // Verifica se o usuário e a senha são válidos
     if ($usuario == $usuario_valido && $senha == $senha_valida) {
