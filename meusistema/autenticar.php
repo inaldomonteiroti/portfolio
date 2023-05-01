@@ -12,9 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifica se o usuário e a senha são válidos
     if ($usuario == $usuario_valido && $senha == $senha_valida) {
         // Autenticação bem-sucedida, inicia a sessão e redireciona para a página inicial
-        session_start();
-        $_SESSION['usuario'] = $usuario;
-        header('Location: modulos/index.html');
+       
         header('Location: modulos/index.html');
         exit;
     } else {
