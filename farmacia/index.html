@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmaVida</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  <link rel="stylesheet" href="css/estilo.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+</head>
+<body>
+  <section id="app">
+    <header>
+      <div class="header-conteudo  limitar-box">
+        <h1>{{ nomeEmpresa }}</h1>
+
+        <nav>
+          <a class="link" href="#sobre">Sobre</a>
+          <a class="link" href="#vacinas">Vacinas</a>
+          <a class="link" href="#contato">Contato</a>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <div class="titulo-site">
+        <div class="titulo-site-descricao">
+          <h2>{{ nomeEmpresa }}</h2>
+          <p>Cuidando de você</p>
+        </div>
+      </div>
+
+      <div id="sobre" class="box-sobre limitar-box">
+        <h2>Quem somos nós?</h2>
+
+        <p>A {{ nomeEmpresa }} é um estabelecimento de saúde, que comercializa medicamentos homeopáticos preparados ou não em seus laboratórios.</p>
+
+        <p> Somos especializados em manipulação de fórmulas magistrais. Em 18 anos, superou os desafios e tornou-se referência pela qualidade de seus serviços.</p>
+
+        <p>Atendemos todas as especialidades médicas.</p>
+        
+        <img src="assets/farmacia.png" />
+      </div>
+
+      <div id="vacinas" class="box-vacinas limitar-box">
+        <h2>Principais vacinas</h2>
+
+        <p>Nossos profissionais estão prontos para aplicar as principais vacinas.</p>
+
+        <p>Dentre elas estão as vacinas contra Dengue, Influenza e Meningococica B.</p>
+
+        <ul class="lista-vacinas">
+          <li v-for="vacina in colecaoVacinas" class="box-vacina">
+            <div class="box-vacina-img">
+              <img src="assets/icon-vacina.png"/>
+            </div>
+
+            <div class="box-vacina-descricao">
+              <h3>{{ vacina.nome }}</h3>
+              
+              <p>{{ vacina.descricao }}</p>
+            </div>  
+          </li>
+        </ul>
+      </div>
+
+      <div id="depoimentos" class="box-depoimentos limitar-box">
+        <h2>O que nossos clientes estão falando</h2>
+
+        <ul class="lista-depoimentos" >
+          <li v-for="depoimento in colecaoDepoimentos" class="box-depoimento">
+            <div class="box-depoimento-img">
+              <img src="assets/icon-cliente.png"/>
+            </div>
+
+            <h3>{{ depoimento.cliente }}</h3>
+            <p>{{ depoimento.opiniao }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div id="contato" class="box-contato limitar-box">
+        <h2>Contato</h2>
+        <p>Atendemos de domingo a domingo.</p>
+        <p>Maiores informações através do número (21) 2100-0000.</p>
+        <p>Estamos localizados na Av. Ayrton Senna, 3000 - Barra da Tijuca, Rio de Janeiro</p><div class="container-rota">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14692.471710812997!2d-43.3641911!3d-22.9826906!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x539cb07246f0e38d!2sVia%20Parque%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1612707978931!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </main>
+
+    <footer>© Copyright - {{ nomeEmpresa }}</footer>
+  </section>
+  
+  <script src="app/script.js"></script>
+</body>
+</html>
